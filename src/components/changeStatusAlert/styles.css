@@ -1,0 +1,198 @@
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FROM HERE */
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  min-width: 350px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.modal-image {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -60px;
+  padding: 20px;
+  background-color: #fcd500;
+  border-radius: 100%;
+}
+
+.title-first-part {
+  margin-top: 40px;
+}
+
+.no-available-text {
+  font-weight: 600;
+  color: #f54337;
+}
+
+.available-text {
+  font-weight: 600;
+  color: #2fd07b;
+}
+
+.reasons-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.insert-reason {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.choose-reason-warning {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #f54337;
+}
+
+.reason-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/*  */
+
+.reason-input {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+label {
+  width: 100%;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  color: rgb(0, 0, 0);
+}
+label::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(1, 171, 171);
+  background-color: #e6e6e6;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6e6e6;
+  border-radius: 2px;
+  box-shadow: none;
+  margin-right: 10px;
+}
+.reason-input:checked + label::after {
+  content: " ";
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ii8+PC9zdmc+");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: center center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  background-color: black;
+  font-size: 10px;
+  height: 22px;
+  width: 22px;
+  border-radius: 2px;
+}
+
+/*  */
+
+.reason-textarea {
+  resize: none;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 15px;
+  border-color: #c3c3c3;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.update-button {
+  cursor: pointer;
+  min-width: 160px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 24px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(255, 204, 0);
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 204, 0);
+}
+
+.update-button:hover {
+  background-color: rgb(255, 204, 0);
+  color: rgb(51, 51, 51);
+}
+
+.cancel-button {
+  cursor: pointer;
+  min-width: 160px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 24px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(255, 204, 0);
+  background-color: rgb(255, 204, 0);
+  color: rgb(51, 51, 51);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.cancel-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 5px 0px;
+}
